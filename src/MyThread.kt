@@ -18,8 +18,7 @@ class MyThread(name: String, private val fileWriter: FileWriter) : Thread(name) 
     }
 
     private fun iWin(name: String) {
-        if(!haveWinner.get()) {
-            haveWinner.set(true)
+        if(haveWinner.compareAndSet(false, true)) {
             fileWriter.append("$name выиграл!\r\n").flush()
         } else {
             fileWriter.append("$name проиграл!\r\n").flush()

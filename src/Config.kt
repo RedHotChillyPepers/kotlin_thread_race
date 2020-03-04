@@ -3,6 +3,6 @@ class Config {
         const val FILE_OUTPUT = "log.txt"
         const val WIN_COUNTER_VALUE = 100
         const val START_COUNTER_VALUE = 0
-        const val THREADS_COUNT = 2
+        const val THREADS_COUNT = 5
     }
 }
